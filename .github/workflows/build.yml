@@ -1,0 +1,39 @@
+name: build
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install build deps
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends zip python3
+
+      - name: Install Android NDK
+        uses: nttld/setup-ndk@v1
+        id: ndk
+        with:
+          ndk-version: r27c
+          add-to-path: false
+
+      - name: Build module
+        env:
+          ANDROID_NDK_HOME: ${{ steps.ndk.outputs.ndk-path }}
+          ABIS: arm64-v8a armeabi-v7a
+        run: |
+          chmod +x build.sh
+          ./build.sh "$ANDROID_NDK_HOME"
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: HuaweiMate80ProSpoof-zip
+          path: dist/*.zip
+          if-no-files-found: error
