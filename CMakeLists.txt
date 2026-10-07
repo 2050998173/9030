@@ -41,8 +41,7 @@ if(Python3_Interpreter_FOUND)
 else()
     message(FATAL_ERROR
         "需要 Python3 来生成嵌入配置(profile_data.cpp)。\n"
-        "NDK 自带的构建环境一般都能找到 python3; 找不到时请显式指定:\n"
-        "  cmake -DPython3_EXECUTABLE=/path/to/python3 ...")
+        "找不到时请显式指定: cmake -DPython3_EXECUTABLE=/path/to/python3 ...")
 endif()
 
 add_library(hw80pro SHARED
@@ -77,12 +76,15 @@ target_link_options(hw80pro PRIVATE
     -Wl,--gc-sections
     -Wl,-z,now
     -Wl,-z,relro
-    -Wl,-z,max-page-size=16384   # Android 15+ 16KB 页面要求
+    -Wl,-z,max-page-size=16384
 )
 
-# 注意: 这里【不能】设 ANDROID_STL=none。
-# 模块里有函数内静态对象 (SpoofDb::instance()、entry_impl 里的 static T module
-# 和 module_abi), 它们需要 __cxa_guard_acquire/release, 由 libc++abi 提供。
-# 保持 NDK 默认的 c++_static 即可 —— 它不会产生对 libc++_shared.so 的依赖,
-# 所以不会给目标进程带来任何动态库冲突。
+# 注意 1: 不要加 -static-libstdc++。
+#   NDK 里没有 libstdc++, 这个 GCC 兼容标志在 NDK 上是 no-op, 而且实测会干扰
+#   链接过程。需要的 libc++ 由 clang 驱动按默认 -stdlib 自动链接。
+# 注意 2: 不要设 ANDROID_STL=none。
+#   模块里有函数内静态对象 (SpoofDb::instance()、entry_impl 里的 static T module
+#   和 module_abi), 它们需要 __cxa_guard_acquire/release, 由 libc++abi 提供。
+#   保持 NDK 默认的 c++_static 即可 —— 它不会产生对 libc++_shared.so 的依赖,
+#   所以不会给目标进程带来动态库冲突。
 target_link_libraries(hw80pro PRIVATE log dl android)
