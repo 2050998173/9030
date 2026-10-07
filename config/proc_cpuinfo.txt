@@ -1,0 +1,94 @@
+# HUAWEI Mate 80 Pro (SGT-AL50) / Kirin 9030 Pro
+# 9 核 14 线程: 1×2.75GHz 超大核 + 4×2.27GHz 大核 + 4×1.72GHz 小核(每核 2 线程)
+#
+# !! 重要 !!
+# 下面带 `<-- 需实机核对` 的行是公开资料无法确认的字段。内核 /proc/cpuinfo 的
+# "CPU part"、"Features"、"CPU revision" 各厂商写法不同，请在你的真机上执行:
+#
+#     adb shell cat /proc/cpuinfo
+#
+# 用真实输出覆盖本文件（保留这份 9 核结构），或者把 hw80pro.conf 里的
+# `cpuinfo=@file` 改成 `cpuinfo=@device` 让模块现读现改。
+#
+# 只有处理器条目数量、型号名、频率这三项能确定，其余建议实机核对。
+
+processor	: 0
+BogoMIPS	: 38.40
+Features	: fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm jscvt fcma lrcpc dcpop sha3 sm3 sm4 asimddp sha512 sve asimdfhm dit uscat ilrcpc flagm ssbs sb paca pacg dcpodp sve2 sveaes svepmull svebitperm svesha3 svesm4 flagm2 frint svei8mm svebf16 i8mm bf16 dgh bti mte ecv afp
+CPU implementer	: 0x48
+CPU architecture: 8
+CPU variant	: 0x1
+CPU part	: 0xd84
+CPU revision	: 1
+
+processor	: 1
+BogoMIPS	: 38.40
+Features	: fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm jscvt fcma lrcpc dcpop sha3 sm3 sm4 asimddp sha512 sve asimdfhm dit uscat ilrcpc flagm ssbs sb paca pacg dcpodp sve2 sveaes svepmull svebitperm svesha3 svesm4 flagm2 frint svei8mm svebf16 i8mm bf16 dgh bti mte ecv afp
+CPU implementer	: 0x48
+CPU architecture: 8
+CPU variant	: 0x1
+CPU part	: 0xd84
+CPU revision	: 1
+
+processor	: 2
+BogoMIPS	: 38.40
+Features	: fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm jscvt fcma lrcpc dcpop sha3 sm3 sm4 asimddp sha512 sve asimdfhm dit uscat ilrcpc flagm ssbs sb paca pacg dcpodp sve2 sveaes svepmull svebitperm svesha3 svesm4 flagm2 frint svei8mm svebf16 i8mm bf16 dgh bti mte ecv afp
+CPU implementer	: 0x48
+CPU architecture: 8
+CPU variant	: 0x1
+CPU part	: 0xd84
+CPU revision	: 1
+
+processor	: 3
+BogoMIPS	: 38.40
+Features	: fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm jscvt fcma lrcpc dcpop sha3 sm3 sm4 asimddp sha512 sve asimdfhm dit uscat ilrcpc flagm ssbs sb paca pacg dcpodp sve2 sveaes svepmull svebitperm svesha3 svesm4 flagm2 frint svei8mm svebf16 i8mm bf16 dgh bti mte ecv afp
+CPU implementer	: 0x48
+CPU architecture: 8
+CPU variant	: 0x1
+CPU part	: 0xd84
+CPU revision	: 1
+
+processor	: 4
+BogoMIPS	: 38.40
+Features	: fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm jscvt fcma lrcpc dcpop sha3 sm3 sm4 asimddp sha512 sve asimdfhm dit uscat ilrcpc flagm ssbs sb paca pacg dcpodp sve2 sveaes svepmull svebitperm svesha3 svesm4 flagm2 frint svei8mm svebf16 i8mm bf16 dgh bti mte ecv afp
+CPU implementer	: 0x48
+CPU architecture: 8
+CPU variant	: 0x1
+CPU part	: 0xd84
+CPU revision	: 1
+
+processor	: 5
+BogoMIPS	: 38.40
+Features	: fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm jscvt fcma lrcpc dcpop sha3 sm3 sm4 asimddp sha512 sve asimdfhm dit uscat ilrcpc flagm ssbs sb paca pacg dcpodp sve2 sveaes svepmull svebitperm svesha3 svesm4 flagm2 frint svei8mm svebf16 i8mm bf16 dgh bti mte ecv afp
+CPU implementer	: 0x48
+CPU architecture: 8
+CPU variant	: 0x1
+CPU part	: 0xd84
+CPU revision	: 1
+
+processor	: 6
+BogoMIPS	: 38.40
+Features	: fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm jscvt fcma lrcpc dcpop sha3 sm3 sm4 asimddp sha512 sve asimdfhm dit uscat ilrcpc flagm ssbs sb paca pacg dcpodp sve2 sveaes svepmull svebitperm svesha3 svesm4 flagm2 frint svei8mm svebf16 i8mm bf16 dgh bti mte ecv afp
+CPU implementer	: 0x48
+CPU architecture: 8
+CPU variant	: 0x1
+CPU part	: 0xd85
+CPU revision	: 1
+
+processor	: 7
+BogoMIPS	: 38.40
+Features	: fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm jscvt fcma lrcpc dcpop sha3 sm3 sm4 asimddp sha512 sve asimdfhm dit uscat ilrcpc flagm ssbs sb paca pacg dcpodp sve2 sveaes svepmull svebitperm svesha3 svesm4 flagm2 frint svei8mm svebf16 i8mm bf16 dgh bti mte ecv afp
+CPU implementer	: 0x48
+CPU architecture: 8
+CPU variant	: 0x1
+CPU part	: 0xd85
+CPU revision	: 1
+
+processor	: 8
+BogoMIPS	: 38.40
+Features	: fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm jscvt fcma lrcpc dcpop sha3 sm3 sm4 asimddp sha512 sve asimdfhm dit uscat ilrcpc flagm ssbs sb paca pacg dcpodp sve2 sveaes svepmull svebitperm svesha3 svesm4 flagm2 frint svei8mm svebf16 i8mm bf16 dgh bti mte ecv afp
+CPU implementer	: 0x48
+CPU architecture: 8
+CPU variant	: 0x1
+CPU part	: 0xd85
+CPU revision	: 1

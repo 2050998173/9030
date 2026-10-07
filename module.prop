@@ -1,0 +1,6 @@
+id=hw80pro_spoof
+name=HUAWEI Mate 80 Pro 全面伪装 (Zygisk)
+version=1.0.0
+versionCode=10000
+author=DSH
+description=基于 Zygisk 的 HUAWEI Mate 80 Pro (SGT-AL50 / 麒麟 9030 Pro) 全面伪装。伪造 CPU 型号与核数、/proc/cpuinfo、系统属性(品牌/型号/指纹/EMUI 版本)、Java 层 Build.* 与 SystemProperties。仅对 com.liuzh.deviceinfo、com.maple.detect、com.tencent.tmgp.dfm 生效, 其它应用完全不受影响。

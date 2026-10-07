@@ -1,0 +1,88 @@
+:root {
+  --bg: #111315;
+  --card: #1b1e22;
+  --fg: #e8eaed;
+  --muted: #9aa0a6;
+  --accent: #cf0a2c;   /* 华为红 */
+  --border: #2c3035;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0 0 32px;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: -apple-system, "HarmonyOS Sans SC", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+header {
+  padding: 20px 16px 14px;
+  border-bottom: 1px solid var(--border);
+  background: linear-gradient(180deg, rgba(207,10,44,.18), transparent);
+}
+
+h1 { margin: 0; font-size: 18px; font-weight: 600; }
+.sub { margin: 4px 0 0; color: var(--muted); font-size: 13px; }
+
+main { padding: 0 16px; }
+
+section { margin-top: 20px; }
+
+h2 {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--muted);
+  text-transform: none;
+  margin: 0 0 8px;
+}
+
+.row { display: flex; gap: 10px; flex-wrap: wrap; }
+
+button {
+  flex: 1 1 auto;
+  min-width: 120px;
+  padding: 11px 16px;
+  border: none;
+  border-radius: 10px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+button.secondary { background: #34383d; }
+button:active { filter: brightness(.88); }
+
+.hint { color: var(--muted); font-size: 12.5px; margin: 8px 0 0; }
+
+pre {
+  margin: 0;
+  padding: 12px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-all;
+  font-family: ui-monospace, Menlo, Consolas, monospace;
+  font-size: 12.5px;
+  line-height: 1.5;
+}
+
+.notes { margin: 0; padding-left: 20px; color: var(--muted); font-size: 13.5px; }
+.notes li { margin-bottom: 6px; }
+.notes b { color: var(--fg); }
+
+code {
+  background: #24282d;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-family: ui-monospace, Menlo, Consolas, monospace;
+  font-size: 12.5px;
+  color: #ffb3c0;
+}

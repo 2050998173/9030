@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mate 80 Pro 伪装</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>HUAWEI Mate 80 Pro 伪装</h1>
+  <p class="sub" id="subtitle">Zygisk 模块</p>
+</header>
+
+<main>
+  <section>
+    <div class="row">
+      <button id="btn-refresh">刷新状态</button>
+      <button id="btn-run" class="secondary">重新生成报告</button>
+    </div>
+    <p class="hint" id="exec-hint"></p>
+  </section>
+
+  <section>
+    <h2>状态报告</h2>
+    <pre id="status">正在读取…</pre>
+  </section>
+
+  <section>
+    <h2>说明</h2>
+    <ul class="notes">
+      <li>伪装<b>只对下面三个应用生效</b>，其它应用完全不受影响：
+        <code>com.liuzh.deviceinfo</code>、<code>com.maple.detect</code>、<code>com.tencent.tmgp.dfm</code>。</li>
+      <li>在终端里执行 <code>getprop</code> <b>看不到</b>伪装结果 —— 那是另一个进程，没有被 hook。</li>
+      <li>要验证效果，请打开上面三个应用里的任意一个查看设备信息。</li>
+      <li>配置改动后需要<b>重启目标应用</b>（或重启手机）才生效。</li>
+      <li>日志：<code>adb shell logcat -s HW80Pro</code>（需先把配置里的 <code>debug=1</code>）。</li>
+    </ul>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
